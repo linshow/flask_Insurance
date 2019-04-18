@@ -1,0 +1,357 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dental Health Medical Category Flat Bootstrap Responsive Website Template | Gallery :: W3layouts</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Dental Health Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+	
+	<!-- css files -->
+    <link href="static/css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="static/css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="static/css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
+	
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+	<!-- //google fonts -->
+	
+</head>
+<body>
+
+<!-- top header -->
+<div class="header-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<ul class="d-lg-flex header-w3_pvt">
+					<li class="mr-lg-3">
+						<span class="fa fa-envelope-open"></span>
+						<a href="mailto:info@example.com" class="">info@example.com</a>
+					</li>
+					<li>
+						<span class="fa fa-phone"></span>
+						<p class="d-inline">Call Us +12 345 678</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-6 header-right-w3_pvt">
+				<ul class="d-lg-flex header-w3_pvt justify-content-lg-end">
+					<li class="mr-lg-3">
+						<span class=""><span class="fa fa-clock-o"></span>Mon - Fri : 8:30am to 9:30pm</span>
+					</li>
+					<li class="">
+						<span class=""><span class="fa fa-clock-o"></span>Sat & Sun : 9:00am to 6:00pm</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //top header -->
+
+<!-- //header -->
+<header class="py-3">
+	<div class="container">
+			<div id="logo">
+				<h1> <a href="index.html"><span class="fa fa-stethoscope" aria-hidden="true"></span> Insurance Health</a></h1>
+			</div>
+		<!-- nav -->
+		<nav class="d-lg-flex">
+
+			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+			<input type="checkbox" id="drop" />
+				<ul class="menu mt-2 ml-auto">
+				<li class="active"><a href="/">Home</a></li>
+				<li class=""><a href="/">About Us</a></li>
+				<li class=""><a href="/">保險服務</a></li>
+				<li class=""><a href="/">保險比較</a></li>
+				<li class=""><a href="/">保險種類</a></li>
+				<li class=""><a href="/">討論區</a></li>
+				<li class=""><a href="/">Contact Us</a></li>
+			</ul>
+			 {% if current_user.is_authenticated %}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img  src="{{current_user.image_url }}" style="float: left;height: 35px;width: 35px;border-radius:50%;margin-right: 10px;margin-top: -6px;" >
+                        
+                        <span>{{current_user.username}}</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li> <a href = "{{url_for('main.user', username=current_user.username)}}">Profile</a></li>                 
+                        <li> <a href = "{{url_for('auth.change_password')}}">Change Password</a></li> 
+                        {% if current_user.can(Permission.MODERATE_COMMENTS) %}
+                        <li><a href={{url_for("main.moderate_comments")}}>Moderate Comments</a></li>
+                        {% endif %}         
+                        <li> <a href = "{{url_for('auth.logout')}}"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a>   </li>   
+                                               
+                    </ul>
+                </li>
+                {% else %}
+                    
+                    <li> <a href = "{{url_for('auth.login')}}"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a> </li>
+                    <li> <a href = "{{url_for('auth.register')}}"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up</a> </li>
+                    
+                {% endif %}
+		</nav>
+		<div class="clear"></div>
+		<!-- //nav -->
+	</div>
+</header>
+<!-- //header -->
+
+<!-- banner -->
+<div class="innerpage-banner" id="home">
+	<div class="inner-page-layer">
+	</div>
+</div>
+<!-- //banner -->
+
+<!-- gallery -->
+<section class="gallery py-5" id="gallery">
+	<div class="container py-lg-5">
+		<h2 class="heading text-center mb-sm-5 mb-4">保險種類</h2>
+		<div class="row news-grids text-center">
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal1"><img src="static/images/21513928149.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal2"><img src="static/images/4aa56f4a01d85a47.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal3"><img src="static/images/china_in.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal4"><img src="static/images/taiwan_in.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal5"><img src="static/images/f_in.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal6"><img src="static/images/tree_in.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal7"><img src="static/images/BNP.png" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal8"><img src="static/images/new_in.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal9"><img src="static/images/friend.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal10"><img src="static/images/big.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal11"><img src="static/images/light.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+			<div class="col-md-3 col-6 gal-img">
+				<a href="#gal12"><img src="static/images/global.jpg" alt="portfolio image" class="img-fluid"></a>
+			</div>
+		</div>
+
+		<!-- popup1 -->
+		<div id="gal1" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/21513928149.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup1 -->
+		<!-- popup2 -->
+		<div id="gal2" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/4aa56f4a01d85a47.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup2 -->
+		<!-- popup3 -->
+		<div id="gal3" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/china_in.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup3 -->
+		<!-- popup4 -->
+		<div id="gal4" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/taiwan_in.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup4 -->
+		<!-- popup5 -->
+		<div id="gal5" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/f_in.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup5 -->
+		<!-- popup6 -->
+		<div id="gal6" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/tree_in.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<!-- //popup6 -->
+		<div id="gal7" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/BNP.png" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<div id="gal8" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/new_in.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<div id="gal9" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/friend.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<div id="gal10" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/big.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<div id="gal11" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/light.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+		<div id="gal12" class="pop-overlay">
+			<div class="popup">
+				<img src="static/images/global.jpg" alt="Popup Image" class="img-fluid" />
+				<p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+				<a class="close" href="#gallery">&times;</a>
+			</div>
+		</div>
+
+	</div>
+</section>
+<!-- //gallery -->
+
+<!-- appointment -->
+<section class="appointment text-center py-5">
+	<div class="container py-sm-3">
+		<h4>make your dream smile a reality</h4>
+		<p class="mt-3">Call Us To Book Your Appointment Today</p>
+		<a href="contact.html">Book an Appointment</a>
+	</div>
+</section>
+<!-- //appointment -->
+
+<!-- footer -->
+<footer class="py-5">
+	<div class="container py-sm-3">
+		<div class="row footer-grids">
+			<div class="col-lg-3 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
+				<h4 class="mb-sm-4 mb-3"><span class="fa fa-stethoscope"></span> Dental Health</h4>
+				<p class="mb-3">Onec Consequat sapien ut cursus rhoncus. Nullam dui mi, vulputate ac metus semper quis luctus sed.</p>
+				<h5>Trusted by <span>500+ People</span> </h5>
+			</div>
+			<div class="col-lg-3 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
+				<h4 class="mb-sm-4 mb-3">Address Info</h4>
+				<p><span class="fa mr-2 fa-map-marker"></span>64d canal street TT 3356 <span>Newyork, NY.</span></p>
+				<p class="phone py-2"><span class="fa mr-2 fa-phone"></span> +1(12) 123 456 789 </p>
+				<p><span class="fa mr-2 fa-envelope"></span><a href="mailto:info@example.com">info@example.com</a></p>
+			</div>
+			<div class="col-lg-2 col-sm-6 mb-sm-0 mb-4">
+				<h4 class="mb-sm-4 mb-3">Quick Links</h4>
+				<ul>
+					<li><a href="#">Terms & Conditions</a></li>
+					<li class="my-2"><a href="#">Support Helpline</a></li>
+					<li><a href="#">Healthy Tips</a></li>
+					<li class="mt-2"><a href="#">Privacy Ploicy</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<h4 class="mb-sm-4 mb-3">Subscribe Us</h4>
+				<p class="mb-3">Subscribe to our newsletter</p>
+				<form action="#" method="post" class="d-flex">
+					<input type="email" id="email" name="EMAIL" placeholder="Enter your email here" required="">
+					<button type="submit" class="btn">Subscribe</button>
+				</form>
+				<div class="icon-social mt-3">
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-facebook"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-twitter"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-dribbble"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-pinterest"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-google-plus"></span>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<!-- copyright -->
+<div class="copyright">
+	<div class="container py-4">
+		<div class=" text-center">
+			<p>© 2019 Dental Health. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a> </p>
+		</div>
+	</div>
+</div>
+<!-- //copyright -->
+		
+<!-- move top -->
+<div class="move-top text-right">
+	<a href="#home" class="move-top"> 
+		<span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+	</a>
+</div>
+<!-- move top -->
+
+</body>
+</html>
